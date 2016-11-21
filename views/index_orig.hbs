@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title }}></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+<h1>Node MondoDB example</h1>
+<h2>POST to Mongo database example</h2>
+<form action="/" method="post">
+    <label for="username">Name</label>
+    <input type="text" id="name" name="name">
+    <br/><br/>
+    <label for="todo">Todo&nbsp;</label>
+    <input type="text" id="todo" name="todo">
+    <br/><br/>
+    <button type="submit">Submit</button>
+</form>
+
+<br/>
+<h2>GET Todos from MongoDB database</h2>
+<ol>
+    {{#each todos}}
+        <li>{{this}}</li>
+    {{/each}}
+</ol>
+</body>
+</html>
+
+
+
+
