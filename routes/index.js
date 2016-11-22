@@ -8,7 +8,7 @@ router.get('/', function(req,res, next){
         docs.forEach(function(doc){
             todos.push(doc.todo);
         });
-        console.log(todos);
+        //console.log(todos);
         res.render('index', {todos: todos});
     });
 });
