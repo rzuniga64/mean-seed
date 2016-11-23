@@ -31,7 +31,7 @@
     "express": "~4.14.0",
     "hbs": "~4.0.1",
     "moment": "^2.17.0",
-    "mongoose": "^4.6.8",
+    "mongoose": "^4.7.0",
     "mongoose-unique-validator": "^1.0.2",
     "morgan": "~1.7.0",
     "ng2-bootstrap": "^1.1.16",
@@ -39,11 +39,11 @@
     "serve-favicon": "~2.3.2",
     "systemjs": "^0.19.41",
     "typings": "^2.0.0",
-    "zone.js": "^0.7.1"
+    "zone.js": "^0.6.26"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.34",
-    "@types/node": "^6.0.49",
+    "@types/node": "^6.0.51",
     "angular2-router-loader": "^0.3.4",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.3",
