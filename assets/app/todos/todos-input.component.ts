@@ -10,11 +10,13 @@ import {TodoService} from "./todo.service";
             <form #todoForm="ngForm" (ngSubmit)="onSubmit(todoForm)">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" required [ngModel]="username">
-                    <label for="content">Todo</label>
-                    <input type="text" class="form-control" id="content" name="content" required [ngModel]="content">            
+                    <input type="text" class="form-control" id="username" name="username" required [ngModel]="todo?.username">          
                 </div>
-                <button type="submit" class="btn btn-primary">{{ !todo ? 'Send Todo' : 'Save Todo' }}</button>
+                <div class="form-group">
+                    <label for="content">Todo</label>
+                    <input type="text" class="form-control" id="content" name="content" required [ngModel]="todo?.content">            
+                </div>
+                <button type="submit" class="btn btn-primary">{{ !todo ? 'Add' : 'Save' }}</button>
                 <button type="button" class="btn btn-danger" (click)="onCancel()" *ngIf="todo"> Cancel </button>
              </form>
         </section>
@@ -41,13 +43,14 @@ export class TodoInputComponent implements OnInit {
         );
     }
 
-    onCancel() {
-        this.todo = null;
+    onCancel(todoForm: NgForm) {
+        this.todo=null;
+        todoForm.resetForm();
     }
 
     onSubmit(todoForm: NgForm) {
         if (this.todo) {
-            // Edit
+            // Edit todo
             this.todo.content = todoForm.value.content;
             this._todoService.updateTodo(this.todo)
                 .subscribe(
@@ -55,14 +58,15 @@ export class TodoInputComponent implements OnInit {
                 );
             this.todo = null;
         } else {
-            const todo:Todo = new Todo(todoForm.value.username, todoForm.value.thetodo, false, false);
+            // Create todo
+            const todo:Todo = new Todo(todoForm.value.username, todoForm.value.content, false, false);
             this._todoService.addTodo(todo)
                 .subscribe(
                     (data:Todo) => {
                         console.log(data);
-                        this._todoService.todos.push(data);
                     }
                 );
         }
+        todoForm.resetForm();
     }
 }

@@ -5,12 +5,19 @@ import { Component } from '@angular/core';
     template: `
     <div class="container">
       
-        <h2>Node MondoDB example</h2>
-        <p>POST to Mongo database example</p>
-        <div class="row">
+        <h2>MEAN Todo Project</h2>
+        <div class="row spacing">
             <app-todo-input></app-todo-input>
         </div><!-- row-->
+        <div class="row spacing">
+            <app-todo-list></app-todo-list>
+        </div><!-- row-->
     </div> <!--container-->
-    `
+    `,
+    styles: [`
+        h2 {
+            text-align: center;
+        }
+    `]
 })
 export class AppComponent { }

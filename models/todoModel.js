@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var todoSchema = new Schema({
     username: {type: String, required: true},
-    todo: {type: String, required: true},
+    content: {type: String, required: true},
     isDone: {type: Boolean},
     hasAttachment: {type: Boolean}
 });

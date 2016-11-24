@@ -6,7 +6,7 @@ import {TodoService} from "./todo.service";
     selector: 'app-todo-list',
     template: `
         <section class="col-md-8 col-md-offset-2">
-            <my-todo *ngFor="let todo of todos" [todo]="todo" (editClicked)="todo.content=$event"></my-todo>
+            <my-todo *ngFor="let todo of todos" [todo]="todo"></my-todo>
         </section>
     `
 })
@@ -21,8 +21,9 @@ export class TodoListComponent implements OnInit {
     ngOnInit() {
         this._todoService.getTodos()
             .subscribe(
-                (todos:Todo[]) => {
+                todos => {
                     this.todos = todos;
+                    this._todoService.todos = todos;
                 }
             );
     }

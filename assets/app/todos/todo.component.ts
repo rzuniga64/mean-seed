@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Output} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {Todo} from "./todo.model";
 import {TodoService} from "./todo.service";
 
@@ -13,7 +13,7 @@ import {TodoService} from "./todo.service";
             <div class="author">
                 {{ todo.username }}
             </div>
-            <div class="config" *ngIf="belongsToUser()">
+            <div class="config">
                 <a  (click)="onEdit()">Edit</a>
                 <a  (click)="onDelete()">Delete</a>
             </div>
@@ -38,7 +38,6 @@ import {TodoService} from "./todo.service";
 
 export class TodoComponent {
     @Input() todo: Todo;  //message is now bindable from outside
-    @Output() editClicked = new EventEmitter<string>(); //custom event will emit a string
 
     constructor(private _todoService: TodoService){}
 

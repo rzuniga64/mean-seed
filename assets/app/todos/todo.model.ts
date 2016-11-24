@@ -3,11 +3,13 @@ export class Todo {
     content: string;
     isDone: Boolean;
     hasAttachment: Boolean;
+    todoId: string;
 
-    constructor (username: string, content: string, isDone?: Boolean, hasAttachment?: Boolean) {
+    constructor (username: string, content: string, isDone?: Boolean, hasAttachment?: Boolean, todoId?: string) {
         this.username = username;
         this.content = content;
         this.isDone = isDone;
         this.hasAttachment = hasAttachment;
+        this.todoId = todoId;
     }
 }
