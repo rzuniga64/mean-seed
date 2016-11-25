@@ -1,3 +1,7 @@
+/**
+ * This lists all the todos in the database.
+ */
+
 import {Component, OnInit} from "@angular/core";
 import {Todo} from "./todo.model";
 import {TodoService} from "./todo.service";

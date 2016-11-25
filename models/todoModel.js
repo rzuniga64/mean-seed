@@ -1,6 +1,5 @@
 /**
- *
- *
+ *  A model that specifies the attributes af a todo list.
  */
 var mongoose = require('mongoose');
 

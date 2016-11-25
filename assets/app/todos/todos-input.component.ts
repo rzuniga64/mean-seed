@@ -1,3 +1,6 @@
+/**
+ * This creates an Angular 2 form for the user to enter in a username and todo list and save it in the database.
+ */
 import {Component, OnInit} from "@angular/core";
 import {FormGroup, FormControl, Validators, NgForm} from "@angular/forms";
 import {Todo} from "./todo.model";

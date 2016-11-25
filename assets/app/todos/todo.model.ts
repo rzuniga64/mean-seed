@@ -1,3 +1,6 @@
+/**
+ * JavaScript class which mirrors the database layout.
+ */
 export class Todo {
     username: string;
     content: string;

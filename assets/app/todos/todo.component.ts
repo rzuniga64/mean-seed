@@ -1,3 +1,6 @@
+/**
+ * This creates a todo component and allows the user to edit and delete components.
+ */
 import {Component, Input} from "@angular/core";
 import {Todo} from "./todo.model";
 import {TodoService} from "./todo.service";

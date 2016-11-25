@@ -1,3 +1,6 @@
+/**
+ * Angular 2 service which connects to the backend Node.js routes.
+ */
 import {Todo} from "./todo.model";
 import {Http, Headers, Response} from "@angular/http";
 import {Injectable, EventEmitter} from "@angular/core";

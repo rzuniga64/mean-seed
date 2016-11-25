@@ -1,3 +1,6 @@
+/**
+ * Backend route to render the homepage.
+ */
 var express = require('express');
 var router = express.Router();
 var Todo = require('../models/todoModel');

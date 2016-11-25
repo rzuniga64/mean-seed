@@ -1,3 +1,6 @@
+/**
+ * The Angular 2 root component file.
+ */
 import { Component } from '@angular/core';
 
 @Component({
