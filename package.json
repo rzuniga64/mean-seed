@@ -4,9 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
-    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'public/js/app/**/*.js' 'public/js/app/**/*.js.map' '!public/js/app/bundle.js' '!public/js/app/*.chunk.js' 'assets/app/**/*.ngfactory.ts' 'assets/app/**/*.shim.ts'",
-
     "gulp": "gulp",
     "postinstall": "typings install --global",
     "tsc": "tsc",
@@ -34,7 +31,6 @@
     "mongoose": "^4.7.0",
     "mongoose-unique-validator": "^1.0.2",
     "morgan": "~1.7.0",
-    "ng2-bootstrap": "^1.1.16",
     "rxjs": "^5.0.0-rc.4",
     "serve-favicon": "~2.3.2",
     "systemjs": "^0.19.41",
@@ -48,13 +44,8 @@
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.3",
     "del-cli": "^0.2.0",
-    "html-loader": "^0.4.4",
-    "raw-loader": "^0.5.1",
     "typescript": "^2.0.10",
-    "webpack": "^2.1.0-beta.21",
-    "webpack-merge": "^0.17.0",
 
-    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-sourcemaps": "^1.6.0",
