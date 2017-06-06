@@ -9,7 +9,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "webdriver:update": "webdriver-manager update"
+    "webdriver:update": "webdriver-manager update",
+    "test": "jasmine"
   },
   "dependencies": {
     "@angular/animations": "^4.1.3",
